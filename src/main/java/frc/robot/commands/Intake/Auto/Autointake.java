@@ -34,11 +34,14 @@ public class Autointake extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-
+//Must be redone so that TWO motors turn.
         while (timer.get() < time) {
-            intake.IntakeMotor.set(.8);
+            intake.IntakeMotor1.set(.8); //another line of this
+                        intake.IntakeMotor2.set(.8);
         }
-        intake.IntakeMotor.set(0);
+        intake.IntakeMotor1.set(0);
+        intake.IntakeMotor2.set(0);
+
         isFinished = true;
 
 

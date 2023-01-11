@@ -81,11 +81,11 @@ public class Drive extends SubsystemBase {
             timer.stop();
             timer.reset();
         }
-
+/*
         SmartDashboard.putNumber("Left Power", (FrontLeft.get() + BackLeft.get()) / 2);
         SmartDashboard.putNumber("Right Power", (FrontRight.get() + BackRight.get()) / 2);
         //output side power
-
+*/
 
     }
 }

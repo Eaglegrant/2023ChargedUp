@@ -16,10 +16,10 @@ public class Intake extends SubsystemBase {
 
     /** Creates a new Intake. */
 
-    public CANSparkMax Feeder = new CANSparkMax(RobotMap.Intake.FM_ID, MotorType.kBrushless);
-    public CANSparkMax IntakeMotor = new CANSparkMax(RobotMap.Intake.InM_ID, MotorType.kBrushless);
+    public CANSparkMax IntakeMotor1 = new CANSparkMax(RobotMap.Intake.InM_ID, MotorType.kBrushless);
+        public CANSparkMax IntakeMotor2 = new CANSparkMax(RobotMap.Intake.InM_ID, MotorType.kBrushless);
     public DoubleSolenoid Solenoid1 = new DoubleSolenoid(2, PneumaticsModuleType.REVPH, RobotMap.Intake.So1_ID, RobotMap.Intake.So2_ID);
-
+public DoubleSolenoid Solenoid2 = new DoubleSolenoid(2, PneumaticsModuleType.REVPH, RobotMap.Intake.So3_ID, RobotMap.Intake.So4_ID);
     public Intake() {
 
 

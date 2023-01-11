@@ -25,10 +25,14 @@
         // Called every time the scheduler runs while the command is scheduled.
         @Override
         public void execute() {
-            if (intake.Solenoid1.get() == Value.kOff) {
+            if (intake.Solenoid1.get() == Value.kOff or intake.Solenoid2.get() == Value.kOff) {
                 intake.Solenoid1.set(Value.kForward);
+                intake.Solenoid2.set(Value.kForward);
+
             } else {
                 intake.Solenoid1.set(Value.kOff);
+                intake.Solenoid2.set(Value.kOff);
+
             }
             isFinished = true;
         }

@@ -38,7 +38,6 @@ public class RedThreeBallAuto extends SequentialCommandGroup {
 
                                       
               new runShooterDistance(turret),     //than shoot first and second ball
-              new Autofeeder(intake, 5),
 
               new resetEncoders(drive),
               new angleDrive(drive, -160), //turn back around       
@@ -52,7 +51,6 @@ public class RedThreeBallAuto extends SequentialCommandGroup {
 
                             
               new runShooterDistance(turret),    //SHOOT!
-              new Autofeeder(intake, 5)
           ));
 
   }

@@ -29,31 +29,28 @@ public class runIntake extends CommandBase {
 
         if (RobotContainer.rightTrigger.get()) {
             //Take in
-            intake.IntakeMotor.set(.9);
+            intake.IntakeMotor1.set(.9);
+            intake.IntakeMotor2.set(-.9);
+
         } else if (RobotContainer.rightButton6.get()) {
             //Spit out
-            intake.IntakeMotor.set(-.9);
+            intake.IntakeMotor1.set(-.9);
+            intake.IntakeMotor2.set(-.9);
+
         } else {
             //Stop draining the battery
-            intake.IntakeMotor.set(0);
-        }
-
-        if (RobotContainer.rightThumb.get()) {
-            //pull in feeder
-            intake.Feeder.set(.8);
-        } else if (RobotContainer.rightButton10.get()) {
-            //move down feeder
-            intake.Feeder.set(-.8);
-        } else {
-            //don't move
-            intake.Feeder.set(0);
+            intake.IntakeMotor1.set(0);
+            intake.IntakeMotor2.set(0);
         }
     }
     public void runCommand(boolean power) {
         if (power) {
-            intake.IntakeMotor.set(.9);
+            intake.IntakeMotor1.set(.9);
+            intake.IntakeMotor2.set(.9);
         } else {
-            intake.IntakeMotor.set(0);
+            intake.IntakeMotor1.set(0);
+            intake.IntakeMotor2.set(0);
+
         }
 
     }

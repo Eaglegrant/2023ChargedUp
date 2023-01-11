@@ -1,4 +1,4 @@
-
+//Must be redone.
 package frc.robot;
 
 import edu.wpi.first.wpilibj.SerialPort;
@@ -29,10 +29,10 @@ public interface RobotMap {
     }
     public interface Intake { 
      public final static int 
-        InM_ID = 21,
-        FM_ID = 22,
+        InM1_ID = 21,
+        INM2_ID = 1, //must be done
         So1_ID = 14, So2_ID = 15;
-      
+      So3_ID = 1, So4_ID = 1; //must be done.
     }
 
     public interface Turret{
